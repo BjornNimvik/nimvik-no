@@ -5,35 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport settings for responsive design -->
     <title>Nimvik.no</title> <!-- Title of the web page, displayed in the browser tab -->
     <!-- Additional meta tags, links to CSS, or other head content can go here -->
-    <style>
-        /* CSS rules go here */
-        body {
-            background-color: #f0f0f0; /* Use a gray color, you can change the hex code to your desired shade of gray */
-            margin: 0; /* Remove default margin */
-            padding: 0; /* Remove default padding */
-        }
-        header {
-            background-color: #9e9e9e; /* Example: Dark gray header background color */
-            color: #fff; /* Example: White text color for the header */
-            padding: 10px; /* Add some padding to the header for spacing */
-        }
-        /* You can add more CSS rules for styling other elements as needed */
-    </style>
+    <!-- Link to your external CSS file -->
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
     <header>
         <h1>Welcome to Nimvik.no</h1>
         <!-- Navigation menu or other header content -->
     </header>
-    
-    <main>
-        <h2>Main Content</h2>
-        <p>There is no content yet</p>
-    </main>
-    
+    <div class="wrapper">    
+        <div class="centered-block"> 
+            <main>
+                <h2>Main Content</h2>
+                    <button id="countButton">Trökk här!</button>
+                    <p id="count">Trökkt: 0</p>
+                
+                    <script src="js/buttoncount.js"></script>
+            </main>
+        </div>
+    </div>
     <footer>
-        <p>&copy; 2023 nimvik.no</p>
-        <!-- Footer content such as copyright information -->
+        <div class="footer-content">
+            <p>&copy; 2023 nimvik.no</p>
+            <!-- Footer content such as copyright information -->
+        </div>
     </footer>
 </body>
+
 </html>
