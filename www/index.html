@@ -6,7 +6,7 @@
     <title>Nimvik.no</title> <!-- Title of the web page, displayed in the browser tab -->
     <!-- Additional meta tags, links to CSS, or other head content can go here -->
     <!-- Link to your external CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css"><script src="js\rangersilder.js"></script>
 </head>
 <body>
     <header>
@@ -17,19 +17,56 @@
         <div class="centered-block"> 
             <main>
                 <h2>Main Content</h2>
+                <div class="left">
                 <div class="slidercontainer">
                     <div class="left">
-                        <p class="slidercontainer-text">Text</p> 
+                        <p class="slidercontainer-text">Hydration</p> 
                     </div>
                     <div class="right">
-                        <p class="slidercontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>
+                        <p class="slidercontainer-text" id="rangeslidervalue_hydration" style="padding-left: 50%";>70%</p>
+
                     </div>
-                    <label for="myrange"></label>
-                    <input type="range" oninput="rangeslider(this.value)" value="70" class="slider" id="myrange"><script src="js\rangersilder.js"></script>
+                    <input type="range" oninput="rangeslidervalue_hydration(this.value)" value="70" class="slider" id="range1">
                 </div>   
+                <div class="slidercontainer">
+                    <div class="left">
+                        <p class="slidercontainer-text">Flour</p> 
+                    </div>
+                    <div class="right">
+                        <p class="slidercontainer-text" id="rangeslidervalue_flour" style="padding-left: 50%";>500g</p>
+                    </div>
+                    <input type="range" max="1200" oninput="rangeslidervalue_flour(this.value)" value="500" class="slider" id="range">
+                </div>   
+                <div class="slidercontainer">
+                    <div class="left">
+                        <p class="slidercontainer-text">Starter</p> 
+                    </div>
+                    <div class="right">
+                        <p class="slidercontainer-text" id="rangeslidervalue_starter" style="padding-left: 50%";>100g</p>
+                    </div>
+                    <input type="range" max="250" oninput="rangeslider_starter(this.value)" value="100"  class="slider" id="range2"> 
+                </div>   
+
+                <div class="slidercontainer">
+                    <div class="left">
+                        <p class="slidercontainer-text">Salt</p> 
+                    </div>
+                    <div class="right">
+                        <p class="slidercontainer-text" id="rangeslidervalue_salt" style="padding-left: 50%";>2%</p>
+                    </div>
+                    <input type="range" max="40" oninput="rangeslider_salt(this.value)" value="20" class="slider" id="range">
+                </div>   
+                </div>
+                <div class="right">
+                    <div class="slidercontainer-text">
+                        <p>Water = <br>  Salt = </p>
+                    </div>
+
+
+                </div>
             </div>
         </div>    
-                                                       
+                          
             </main>
     <footer>
         <div class="footer-content">
