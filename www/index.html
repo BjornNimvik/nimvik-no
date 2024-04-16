@@ -10,39 +10,26 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to Nimvik.no</h1>
+        <h1>Welcome</h1>
         <!-- Navigation menu or other header content -->
     </header>
     <div class="wrapper">    
         <div class="centered-block"> 
             <main>
                 <h2>Main Content</h2>
-                <div class="slidecontainer">
+                <div class="slidercontainer">
                     <div class="left">
-                        <div class="left">
-                            <p class="slidecontainer-text">Text</p> 
-                            </div>
-                            <p class="slidecontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>   
-                        <input type="range" oninput="rangeslider(this.value)" value="70">  
-                            <script src="js\rangersilder.js"></script> 
-                        </div>   
+                        <p class="slidercontainer-text">Text</p> 
                     </div>
-
-                <div class="slidecontainer">
-                    <div class="left">
-                        <div class="left">
-                            <p class="slidecontainer-text">Text</p> 
-                            </div>
-                            <p class="slidecontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>   
-                        <input type="range" oninput="rangeslider(this.value)" value="70">  
-                            <script src="js\rangersilder.js"></script> 
-                        </div>   
+                    <div class="right">
+                        <p class="slidercontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>
                     </div>
-                
-
-
-            </div>    
-        </div>                                                       
+                    <label for="myrange"></label>
+                    <input type="range" oninput="rangeslider(this.value)" value="70" class="slider" id="myrange"><script src="js\rangersilder.js"></script>
+                </div>   
+            </div>
+        </div>    
+                                                       
             </main>
     <footer>
         <div class="footer-content">

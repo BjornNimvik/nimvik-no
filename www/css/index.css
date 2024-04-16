@@ -22,7 +22,7 @@ body {
 header {
     background-color: #333; /* Example: Dark gray header background color */
     color: #ffffff; /* Example: White text color for the header */
-    padding: 10px; /* Add some padding to the header for spacing */
+    padding-left: 15px; /* Add some padding to the header for spacing */
 }
 /* You can add more CSS rules for styling other elements as needed */
 /* Style the footer */
@@ -30,27 +30,53 @@ footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 20px;
+    padding-bottom: 5px;
+    padding-top: 5px;
 }
 /* Style the footer content */
 .footer-content {
     font-size: 15px;
 }
-.slidecontainer {
-    display: flex;
-    width: 30%;
+.slidercontainer {
+    width: 25%;
     height: auto;
-    /*border: 2px solid black;*/ 
-    padding: 10px; 
+    border: 1px solid black; 
+    padding: 15px; 
 }
-.slidecontainer-text{
+.slider {
+    -webkit-appearance: none; /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 15px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+}
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #1ebfe7; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+}
+.slidercontainer-text{
     color: rgb(74, 74, 74);
-    font-size: 22px;
+    font-size: 28px;
     margin: 5px;
 }
 .left, .right {
     height: auto;
-    /*border: 2px solid #ff0000;*/
     float: left;
     width: 50%;
+}
+.left-quarter, .leftcenter-quarter, .rightcenter-quarter, .right-quarter {
+    height: auto;
+    float: left;
+    width: 25%;
 }
