@@ -1,6 +1,6 @@
 .centered-block {
     width: 95%; /* You can adjust the width as needed */
-    margin: 0 auto; /* Center the block element horizontally */
+    margin: auto; /* Center the block element horizontally */
     /* Add styling for your block element */
 }
 body, html {
@@ -20,8 +20,8 @@ body {
     /* Add any additional styles to your content wrapper */
 }
 header {
-    background-color: #9e9e9e; /* Example: Dark gray header background color */
-    color: #fff; /* Example: White text color for the header */
+    background-color: #333; /* Example: Dark gray header background color */
+    color: #ffffff; /* Example: White text color for the header */
     padding: 10px; /* Add some padding to the header for spacing */
 }
 /* You can add more CSS rules for styling other elements as needed */
@@ -32,8 +32,25 @@ footer {
     text-align: center;
     padding: 20px;
 }
-
 /* Style the footer content */
 .footer-content {
-    font-size: 14px;
+    font-size: 15px;
+}
+.slidecontainer {
+    display: flex;
+    width: 30%;
+    height: auto;
+    /*border: 2px solid black;*/ 
+    padding: 10px; 
+}
+.slidecontainer-text{
+    color: rgb(74, 74, 74);
+    font-size: 22px;
+    margin: 5px;
+}
+.left, .right {
+    height: auto;
+    /*border: 2px solid #ff0000;*/
+    float: left;
+    width: 50%;
 }

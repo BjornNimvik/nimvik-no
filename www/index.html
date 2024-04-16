@@ -17,15 +17,33 @@
         <div class="centered-block"> 
             <main>
                 <h2>Main Content</h2>
-                    <button id="countButton">Trökk här!</button>
-                    <p id="count">Trökkt: 0</p>
-                
-                    <script src="js/buttoncount.js"></script>
+                <div class="slidecontainer">
+                    <div class="left">
+                        <div class="left">
+                            <p class="slidecontainer-text">Text</p> 
+                            </div>
+                            <p class="slidecontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>   
+                        <input type="range" oninput="rangeslider(this.value)" value="70">  
+                            <script src="js\rangersilder.js"></script> 
+                        </div>   
+                    </div>
 
-                    <a href="https://subdomain.nimvik.no/">Go to subdomain</a>
+                <div class="slidecontainer">
+                    <div class="left">
+                        <div class="left">
+                            <p class="slidecontainer-text">Text</p> 
+                            </div>
+                            <p class="slidecontainer-text" id="rangeslidervalue" style="padding-left: 50%";>70</p>   
+                        <input type="range" oninput="rangeslider(this.value)" value="70">  
+                            <script src="js\rangersilder.js"></script> 
+                        </div>   
+                    </div>
+                
+
+
+            </div>    
+        </div>                                                       
             </main>
-        </div>
-    </div>
     <footer>
         <div class="footer-content">
             <p>&copy; 2023 nimvik.no</p>
