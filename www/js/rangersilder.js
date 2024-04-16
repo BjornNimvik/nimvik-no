@@ -8,7 +8,7 @@ function rangeslidervalue_flour(value) {
     document.getElementById("rangeslidervalue_flour").innerHTML = value + "g"; 
 }
 function rangeslider_salt(value) {
-    document.getElementById("rangeslidervalue_salt").innerHTML = value/10 + "%"; 
+    document.getElementById("rangeslidervalue_salt").innerHTML = value + "%"; 
 }
 
 function getWater(flour_g, hydration_pcnt ){
