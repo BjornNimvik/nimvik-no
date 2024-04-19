@@ -38,7 +38,7 @@ footer {
     font-size: 15px;
 }
 .slidercontainer {
-    width: 70%;
+    width: 100%;
     height: auto;
     border: 1px solid black; 
     padding: 20px; 
@@ -77,8 +77,20 @@ footer {
     float: left;
     width: 50%;
 }
+.leftpage {
+    height: auto;
+    float: left;
+    width: 35%;
+    padding-right: 80px;
+}
 .left-quarter, .leftcenter-quarter, .rightcenter-quarter, .right-quarter {
     height: auto;
     float: left;
     width: 25%;
 }
+
+.tab {
+    overflow: hidden;
+    background-color: #f1f1f1;
+    padding:1%;
+  }

@@ -1,16 +1,12 @@
-function rangeslidervalue_hydration(value) {
-    document.getElementById("rangeslidervalue_hydration").innerHTML = value + "%"; 
-}
-function rangeslider_starter(value) {
-    document.getElementById("rangeslidervalue_starter").innerHTML = value + "g"; 
-}
-function rangeslidervalue_flour(value) {
-    document.getElementById("rangeslidervalue_flour").innerHTML = value + "g"; 
-}
-function rangeslider_salt(value) {
-    document.getElementById("rangeslidervalue_salt").innerHTML = value + "%"; 
-}
-
-function getWater(flour_g, hydration_pcnt ){
-    return (flour_g * hydration_pcnt/100); 
+function rangeslider(slide_value, id_string) {
+    if (id_string == "value_hydration" || id_string == "value_salt"){
+        appendix_string = "%"
+        if (id_string == "value_salt"){
+            slide_value = slide_value/10
+        }
+    }
+    else {
+        appendix_string = "g"
+    }
+    document.getElementById(id_string).innerHTML = slide_value + appendix_string; 
 }

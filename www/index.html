@@ -6,7 +6,7 @@
     <title>Nimvik.no</title> <!-- Title of the web page, displayed in the browser tab -->
     <!-- Additional meta tags, links to CSS, or other head content can go here -->
     <!-- Link to your external CSS file -->
-    <link rel="stylesheet" type="text/css" href="css/index.css"><script src="js\rangersilder.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
     <header>
@@ -16,64 +16,82 @@
     <div class="wrapper">    
         <div class="centered-block"> 
             <main>
-                <h2>Main Content</h2>
-                <div class="left">
-                <div class="slidercontainer">
-                    <div class="left">
-                        <p class="slidercontainer-text">Hydration</p> 
-                    </div>
-                    <div class="right">
-                        <p class="slidercontainer-text" id="rangeslidervalue_hydration" style="padding-left: 50%";>70%</p>
-
-                    </div>
-                    <input type="range" max="110" oninput="rangeslidervalue_hydration(this.value)" value="70" class="slider" id="range1">
-                </div>   
-                <div class="slidercontainer">
-                    <div class="left">
-                        <p class="slidercontainer-text">Flour</p> 
-                    </div>
-                    <div class="right">
-                        <p class="slidercontainer-text" id="rangeslidervalue_flour" style="padding-left: 50%";>500g</p>
-                    </div>
-                    <input type="range" max="1200" oninput="rangeslidervalue_flour(this.value)" value="500" class="slider" id="range">
-                </div>   
-                <div class="slidercontainer">
-                    <div class="left">
-                        <p class="slidercontainer-text">Starter</p> 
-                    </div>
-                    <div class="right">
-                        <p class="slidercontainer-text" id="rangeslidervalue_starter" style="padding-left: 50%";>100g</p>
-                    </div>
-                    <input type="range" max="250" oninput="rangeslider_starter(this.value)" value="100"  class="slider" id="range2"> 
-                </div>   
-
-                <div class="slidercontainer">
-                    <div class="left">
-                        <p class="slidercontainer-text">Salt</p> 
-                    </div>
-                    <div class="right">
-                        <p class="slidercontainer-text" id="rangeslidervalue_salt" style="padding-left: 50%";>2%</p>
-                    </div>
-                    <input type="range" max="40" oninput="rangeslider_salt(this.value)" value="20" class="slider" id="range">
-                </div>   
+                <div class="tab">
+                    <button class="tablinks" onclick="openCity(event, 'Sourdough')">Sourdough</button>
+                    <button class="tablinks" onclick="openCity(event, 'Ginger Beer')">Ginger Beer</button>
+                    <button class="tablinks" onclick="openCity(event, 'Sauerkraut')">Sauerkraut</button>
                 </div>
-                <div class="right">
-                    <div class="slidercontainer-text">
-                        <p>Water = <br>  Salt = </p>
+                    <div id="Sourdough" class="tabcontent">
+                    <h2>Sourdough</h2>
+                    <div class="leftpage">
+                    <div class="slidercontainer">
+                        <div class="left">
+                            <p class="slidercontainer-text">Hydration</p> 
+                        </div>
+                        <div class="right">
+                            <p class="slidercontainer-text" id="value_hydration" style="padding-left: 50%";>70%</p>
+
+                        </div>
+                        <input type="range" min="50" max="110" oninput="rangeslider(this.value, 'value_hydration')" value="70" class="slider" id="rangeslidervalue_hydration">
+                    </div>   
+                    <div class="slidercontainer">
+                        <div class="left">
+                            <p class="slidercontainer-text">Flour</p> 
+                        </div>
+                        <div class="right">
+                            <p class="slidercontainer-text" id="value_flour" style="padding-left: 50%";>500g</p>
+                        </div>
+                        <input type="range" max="1500" oninput="rangeslider(this.value, 'value_flour')" value="500" class="slider" id="rangeslidervalue_flour">
+                    </div>   
+                    <div class="slidercontainer">
+                        <div class="left">
+                            <p class="slidercontainer-text">Starter</p> 
+                        </div>
+                        <div class="right">
+                            <p class="slidercontainer-text" id="value_starter" style="padding-left: 50%";>100g</p>
+                        </div>
+                        <input type="range" max="250" oninput="rangeslider(this.value, 'value_starter')" value="100"  class="slider" id="rangeslidervalue_starter"> 
+                    </div>   
+
+                    <div class="slidercontainer">
+                        <div class="left">
+                            <p class="slidercontainer-text">Salt</p> 
+                        </div>
+                        <div class="right">
+                            <p class="slidercontainer-text" id="value_salt" style="padding-left: 50%";>2%</p>
+                        </div>
+                        <input type="range" max="40" oninput="rangeslider(this.value, 'value_salt' )" value="20" class="slider" id="rangeslidervalue_salt">
+                    </div>   
+                    <script src="js\rangersilder.js"></script>
+
                     </div>
-                    <h3>Recepie</h2>
-                    <p>1. Mix water and starter.</h3>
-                    <p>2. Mix in flour and salt. </h3>
-                    <p>3. Let rest for 30 - 60 min.</h3>
-                    <p>4. Do one strech and fold. For the next 2h perform strech and fold each 30 min.</h3>
-                    <p>5. Let rest over night for bettter taste, or proceed to next step immedately.</p>
-                    <p>6. Put pot in oven and set to 250C. </p>
-                    <p>6. Pour dough on kitchen bench and form to a ball by rotating the mass with a dough cutter. Let rest for 30 min.</p>
-                    <p>7. From dough to a ball and cover with flour.</p>
-                    <p>8. Put dough in pot and put lid on for 30-40minutes, depending on bread size.</p>
-                    <p>9. Let bread cool under blanket for 60min</p>
+                    <div class="right">
+                        <div class="slidercontainer-text">
+                            
+                            <button onclick="getWater_ml( 'Water_id', 'rangeslidervalue_flour',
+                             'rangeslidervalue_hydration' , 'rangeslidervalue_starter');
+                             getSalt_g('Salt_id', 'rangeslidervalue_flour', 'rangeslidervalue_salt');">
+                             Update
+                                </button>
+                                <p id="Water_id" style="padding-left: 2%";>Water = </p>
+                                <p id="Salt_id" style="padding-left: 2%";>Salt = </p>
+                            <script src="js\bakerspcntg.js"></script>
+                            </div>
+                        
+                        <h3>Recepie</h2>
+                        <p>1. Mix water and starter.</h3>
+                        <p>2. Mix in flour and salt. </h3>
+                        <p>3. Let rest for 30 - 60 min.</h3>
+                        <p>4. Do one strech and fold. For the next 2h perform strech and fold each 30 min.</h3>
+                        <p>5. Let rest over night for bettter taste, or proceed to next step immedately.</p>
+                        <p>6. Put pot in oven and set to 250C. </p>
+                        <p>6. Pour dough on kitchen bench and form to a ball by rotating the mass with a dough cutter. Let rest for 30 min.</p>
+                        <p>7. From dough to a ball and cover with flour.</p>
+                        <p>8. Put dough in pot and put lid on for 30-40minutes, depending on bread size.</p>
+                        <p>9. Let bread cool under blanket for 60min</p>
 
-
+                    
+                    </div>
                 </div>
             </div>
         </div>    
