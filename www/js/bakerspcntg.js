@@ -1,3 +1,9 @@
+function updateWaterAndSalt(){
+    getWater_ml('Water_id', 'rangeslidervalue_flour',
+    'rangeslidervalue_hydration' , 'rangeslidervalue_starter');
+    getSalt_g('Salt_id', 'rangeslidervalue_flour', 'rangeslidervalue_salt');
+}
+
 function getWater_ml(id_string, id_flour, id_hydration, id_starter){
     
     flour_g = document.getElementById(id_flour).value;

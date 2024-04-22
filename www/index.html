@@ -32,7 +32,7 @@
                             <p class="slidercontainer-text" id="value_hydration" style="padding-left: 50%";>70%</p>
 
                         </div>
-                        <input type="range" min="50" max="110" oninput="rangeslider(this.value, 'value_hydration')" value="70" class="slider" id="rangeslidervalue_hydration">
+                        <input type="range" min="50" max="110" oninput="rangeslider(this.value, 'value_hydration'); updateWaterAndSalt();" value="70" class="slider" id="rangeslidervalue_hydration">
                     </div>   
                     <div class="slidercontainer">
                         <div class="left">
@@ -41,7 +41,7 @@
                         <div class="right">
                             <p class="slidercontainer-text" id="value_flour" style="padding-left: 50%";>500g</p>
                         </div>
-                        <input type="range" max="1500" oninput="rangeslider(this.value, 'value_flour')" value="500" class="slider" id="rangeslidervalue_flour">
+                        <input type="range" max="1500" oninput="rangeslider(this.value, 'value_flour'); updateWaterAndSalt();" value="500" class="slider" id="rangeslidervalue_flour">
                     </div>   
                     <div class="slidercontainer">
                         <div class="left">
@@ -50,7 +50,7 @@
                         <div class="right">
                             <p class="slidercontainer-text" id="value_starter" style="padding-left: 50%";>100g</p>
                         </div>
-                        <input type="range" max="250" oninput="rangeslider(this.value, 'value_starter')" value="100"  class="slider" id="rangeslidervalue_starter"> 
+                        <input type="range" max="250" oninput="rangeslider(this.value, 'value_starter'); updateWaterAndSalt();" value="100"  class="slider" id="rangeslidervalue_starter"> 
                     </div>   
 
                     <div class="slidercontainer">
@@ -60,21 +60,15 @@
                         <div class="right">
                             <p class="slidercontainer-text" id="value_salt" style="padding-left: 50%";>2%</p>
                         </div>
-                        <input type="range" max="40" oninput="rangeslider(this.value, 'value_salt' )" value="20" class="slider" id="rangeslidervalue_salt">
+                        <input type="range" max="40" oninput="rangeslider(this.value, 'value_salt' ); updateWaterAndSalt();" value="20" class="slider" id="rangeslidervalue_salt">
                     </div>   
                     <script src="js\rangersilder.js"></script>
 
                     </div>
                     <div class="right">
-                        <div class="slidercontainer-text">
-                            
-                            <button onclick="getWater_ml( 'Water_id', 'rangeslidervalue_flour',
-                             'rangeslidervalue_hydration' , 'rangeslidervalue_starter');
-                             getSalt_g('Salt_id', 'rangeslidervalue_flour', 'rangeslidervalue_salt');">
-                             Update
-                                </button>
-                                <p id="Water_id" style="padding-left: 2%";>Water = </p>
-                                <p id="Salt_id" style="padding-left: 2%";>Salt = </p>
+                        <div class="slidercontainer-text">                             
+                                <p id="Water_id" style="padding-left: 2%";>Water = 350g</p>
+                                <p id="Salt_id" style="padding-left: 2%";>Salt = 10g</p>
                             <script src="js\bakerspcntg.js"></script>
                             </div>
                         
